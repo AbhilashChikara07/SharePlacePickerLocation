@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (dialog.isShowing())
+        if (dialog != null && dialog.isShowing())
             dialog.dismiss();
         if (checkGps()) {
             try {
